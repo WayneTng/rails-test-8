@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'slim-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -35,6 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'rspec-rails'         # Rails testing
+  gem 'shoulda'             # rspec model testing
+  gem 'factory_girl_rails'  # Generate fixtures for testing
+
+  gem 'better_errors'       # Display a better error page on development webpage
+  gem 'pry-rails'
+  gem 'binding_of_caller'   # Required by better_errors gem
+  gem 'awesome_print'       # Pretty prints Ruby objects for inspection
 end
 
 group :development do
