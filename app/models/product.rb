@@ -12,4 +12,8 @@ class Product < ActiveRecord::Base
                                                             "image/gif", 
                                                             "image/pjpeg", 
                                                             "image/x-png"]
+
+  def self.find_by_brand(id)
+    where(brand_id: id)
+  end
 end

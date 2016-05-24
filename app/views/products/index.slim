@@ -2,18 +2,7 @@
   .container
     .row
       .col-md-3
-        | search
+        = render 'shared/search'
       .col-md-9
-        .row
-          - if @products.present?
-            - @products.each do |product|
-              .col-md-4
-                .row
-                  .col-md-12
-                    = image_tag product.image.url(:medium)
-                  .col-md-12
-                    = product.name
-                  .col-md-12
-                    = product.sku
-                  .col-md-12
-                    = product.price
+        .row.products-list
+          = render @products
