@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'materialize-sass'
 gem 'paperclip'
+gem 'will_paginate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
