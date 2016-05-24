@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @search   = SearchFilter.new(search_params)
-    @products = @search.result
+    @products = @search.result.paginate(page: params[:page], per_page: 9)
 
     respond_to do |format|
       format.html
