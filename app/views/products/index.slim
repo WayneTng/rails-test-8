@@ -4,6 +4,8 @@
       .col-md-3
         = render 'shared/search'
       .col-md-9
+        .banner
+          = render 'shared/banner'
         .row.products-list
           = render @products
       = will_paginate @products

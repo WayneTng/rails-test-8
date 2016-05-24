@@ -1,4 +1,8 @@
-= simple_form_for @search, url: root_path, html: { method: :get }, remote: true do |form|
-  .brands Brands
-  = form.input :brand_ids, as: :check_boxes, collection: Brand.all, label: false
-  = form.button :submit
+#shared-search
+  .refine-by
+    h3 Refine by
+  .form
+    = simple_form_for @search, url: root_path, html: { method: :get }, remote: true do |form|
+      h4.brands Brands
+      = form.input :brand_ids, as: :check_boxes, collection: Brand.all, label: false
+      = form.button :submit
