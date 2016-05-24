@@ -1,0 +1,19 @@
+#products-index-container
+  .container
+    .row
+      .col-md-3
+        | search
+      .col-md-9
+        .row
+          - if @products.present?
+            - @products.each do |product|
+              .col-md-3
+                .row
+                  .col-md-12
+                    |image
+                  .col-md-12
+                    = product.name
+                  .col-md-12
+                    = product.sku
+                  .col-md-12
+                    = product.price
