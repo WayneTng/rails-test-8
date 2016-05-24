@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  context 'Association' do
+    it { is_expected.to belong_to :brand }
+  end
+
   context 'Validation' do
     context 'Presence' do
       it { is_expected.to validate_presence_of :sku }
